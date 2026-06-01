@@ -13,6 +13,10 @@ on:
     branches:
       - main
 
+# 关键：授予 GITHUB_TOKEN 写入权限，否则无法推送到 output 分支
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
